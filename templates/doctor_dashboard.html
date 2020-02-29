@@ -4,45 +4,75 @@
   <head>
     {% include "html_head.html" %}
   
-    <!-- plugins:css -->
+    
    
   </head>
   <body>
     <div class="container-scroller">
-      <!-- partial:partials/_navbar.html -->
-       {% include "doctor_sidebar.html" %}
+      
+       {% include "patient_sidebar.html" %}
         <div class="main-panel">
           <div class="content-wrapper">
           
-           
             <div class="row">
-              <div class="col-sm-8">
+              <div class="col-sm-8 grid-margin stretch-card">
                  <div class="card">
                   <div class="card-body">
-                <h3 class="page-title mb-3 ml-4">
-                <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-lightbulb"></i>
-                </span> Ideas </h3>
-
-                <!--Start Loop-->
-                {% for name in data %}
+                <!-- Button trigger modal -->
                 
-                <div class="col-md-12 stretch-card grid-margin">
-                <div class="card bg-gradient-primary card-img-holder text-white">
-                  <div class="card-body">
-                    <img src="{% static '/assets/images/dashboard/circle.svg' %}" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="font-weight-normal mb-3">{{name.domain}} </i>
-                    </h4>
-                    <h2 class="mb-4">{{name.title}}</h2>
-                    <p>{{name.about}}</p>
-                      <h6 class="card-text"><i class="mdi mdi-heart mdi-20px"></i> 100
-                     <i class="mdi mdi-eye mdi-20px ml-3"></i> 100</h6>
+                <h3 class="page-title">
+			               <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                          <i class="mdi mdi-format-list-bulleted"></i>
+                        </span> Questions</h3>
+		            
+                   <div class="row mt-4">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Sort by Disease : </label>
+                                    <div class="col-sm-6">
+                                        <select class="form-control form-control-sm" id="sortbydisease">
+                                            <option>Category1</option>
+                                            <option>Category2</option>
+                                            <option>Category3</option>
+                                            <option>Category4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                           
                   </div>
-                </div>
+       
+                <!--Start Loop-->
+               
+                
+              <div class="col-sm-12 grid-margin stretch-card">
+                   
+                     
+                      <ul class="list-arrow">
+                      
+                        <li><a href="" style="text-decoration : none;" class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium voluptas soluta eligendi, in, natus delectus perferendis incidunt excepturi impedit error eum explicabo sequi labore quam sint quae quasi vero esse!</a></li>
+                         <hr>
+
+                         <li><a href="" style="text-decoration : none;" class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium voluptas soluta eligendi, in, natus delectus perferendis incidunt excepturi impedit error eum explicabo sequi labore quam sint quae quasi vero esse!</a></li>
+                         <hr>
+                         <li><a href="" style="text-decoration : none;" class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium voluptas soluta eligendi, in, natus delectus perferendis incidunt excepturi impedit error eum explicabo sequi labore quam sint quae quasi vero esse!</a></li>
+                         <hr>
+                         <li><a href="" style="text-decoration : none;" class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium voluptas soluta eligendi, in, natus delectus perferendis incidunt excepturi impedit error eum explicabo sequi labore quam sint quae quasi vero esse!</a></li>
+                         <hr>
+                         <li><a href="" style="text-decoration : none;" class="text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium voluptas soluta eligendi, in, natus delectus perferendis incidunt excepturi impedit error eum explicabo sequi labore quam sint quae quasi vero esse!</a></li>
+                         <hr>
+                       
+                       
+                      </ul>
+                    
               </div>
               
 
-              {% endfor %}
+              
+              
+              
+
+              
               <!--end-->
 
               
@@ -52,16 +82,16 @@
             <div class="col-sm-4 grid-margin stretch-card">
                    <div class="card">
                     <div class="card-body">
-                       <h3 class="page-title mb-3 ml-4">
+                       <h3 class="page-title mb-3">
                         <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                          <i class="mdi mdi-newspaper"></i>
-                        </span> News </h3>
+                          <i class="mdi mdi-format-list-bulleted"></i>
+                        </span> Recent Questions </h3>
                      
                       <ul class="list-arrow">
-                       {% for name in news %}
-                        <li><a href= {{ name.links }} style="text-decoration : none;" class="text-dark">{{ name.title }}</a></li>
+                      
+                        <li><a href="" style="text-decoration : none;" class="text-dark">Lorem</a></li>
                          <hr>
-                       {% endfor %}
+                      
                        
                       </ul>
                     </div>
@@ -70,34 +100,6 @@
             </div><!--row end-->
           </div>
           <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-          <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="#" target="_blank">Startup Finder</a>. All rights reserved.</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
-            </div>
-          </footer>
-          <!-- partial -->
-        </div>
-        <!-- main-panel ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
-    </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{% static '/assets/vendors/js/vendor.bundle.base.js' %}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="{% static '/assets/vendors/chart.js/Chart.min.js' %}"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{% static '/assets/js/off-canvas.js' %}"></script>
-    <script src="{% static '/assets/js/hoverable-collapse.js' %}"></script>
-    <script src="{% static '/assets/js/misc.js' %}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
-    <script src="{% static '/assets/js/dashboard.js' %}"></script>
-    <script src="{% static '/assets/js/todolist.js' %}"></script>
-    <!-- End custom js for this page -->
+          {% include "footer.html" %}
   </body>
 </html>
