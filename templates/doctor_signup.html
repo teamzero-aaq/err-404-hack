@@ -10,7 +10,7 @@
 <body>
 <section class="login-section">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row"> 
             <div class="col-sm-6">
                 <div class="image-wrapper">
                    <img class="img-responsive" src="{% static 'assets/images/login1.gif' %}" alt="">
@@ -19,25 +19,28 @@
 
             <div class="col-sm-6">
                 <div class="content-wrapper label-input">
-                    <h2 class="page-title">Investor Register</h2>
+                    <h2 class="page-title">Doctor Register</h2>
                     <form method="post" action="">
                         {% csrf_token %}
 
                         <div class="name-wrapper field-wrapper">
-                            <input type="text" name="cname" placeholder="Company Name">
+                            <input type="text" name="dname" id="dname" placeholder="Name">
                         </div>
 
                         <div class="email-wrapper field-wrapper">
-                            <input type="text" name="email" placeholder="Email address">
-                        </div>
-
-                        <div class="name-wrapper field-wrapper">
-                            <input type="text" name="gst" placeholder="GST No.">
-                        </div>
+                            <input type="email" name="demail" id="demail" placeholder="Email address">
+                        </div> 
 
                         <div class="phone-wrapper field-wrapper">
-                            <input type="text" name="phone" placeholder="Phone">
+                            <input type="text" name="dphone" id="dphone" placeholder="Phone">
                         </div>
+                        <div class=" name-wrapper field-wrapper ">
+                      
+                      <select class="form-control form-control-sm" id="exampleFormControlSelect3">
+                      <option default>Specilist</option>
+                       <option value="">lorem1</option>
+                      </select>
+                    </div>
 
                         <div class="pass-wrapper field-wrapper">
                             <input type="password" name="pass" placeholder="Password">
