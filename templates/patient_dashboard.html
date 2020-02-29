@@ -24,6 +24,7 @@
 			               <span class="page-title-icon bg-gradient-primary text-white mr-2">
                           <i class="mdi mdi-format-list-bulleted"></i>
                         </span>  Posts</h3>
+                        
 		               
  <button type="button" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#exampleModalCenter">
   Share Your Experience
@@ -49,6 +50,15 @@
                       <div class="form-group">
                         <label for="description">Description</label>
                         <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="Describe your Experience"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <input type="file" name="img[]" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                          <input type="text" class="form-control form-control-sm file-upload-info" disabled placeholder="Upload Image">
+                          <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-gradient-primary btn-sm" type="button">Upload</button>
+                          </span>
+                        </div>
                       </div>
                      
       </div>
@@ -97,8 +107,16 @@
                        <h3 class="page-title mb-3">
                         <span class="page-title-icon bg-gradient-primary text-white mr-2">
                           <i class="mdi mdi-format-list-bulleted"></i>
-                        </span> Tips </h3>
-                     
+                        </span> Sort by Disease </h3>
+                     <div class="form-group row">
+                            <div class="col-sm-12">
+                              <select class="form-control" name="disease" id="disease">
+                                <option value="">America</option>
+                                <option value="">Italy</option>
+                               
+                              </select>
+                            </div>
+                          </div>
                       <ul class="list-arrow">
                       
                         <li><a href="" style="text-decoration : none;" class="text-dark">Lorem</a></li>
